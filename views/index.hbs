@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>links}}
+    <title>Weather APP</title>
+</head>
+
+<body>
+    {{!-- Navbar --}}
+    {{>navbar}}
+    <!-- Hero Section -->
+    <div class="container-fluid main_header d-flex justify-content-center align-items-center flex-wrap p-3 p-lg-5">
+        <div class="col-md-6 col-12 main_left my-4">
+            <p class="fs-5">Welcome to Qwik Weather</p>
+            <h1 class="fs-3">Get The Latest Weather Updates Of Your City</h1>
+            <a href="/weather"><button class="my-2">Check now</button></a>
+        </div>
+        <div class="col-md-6 col-12 main_header_right mb-4">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.GdzDu6Zm8HTvXDwYggqQ0wHaEK&pid=Api&P=0&h=180"
+                            class="d-block w-100" alt="Sunny">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.EmoTY4vK1iGhsUjQFodSgQAAAA&pid=Api&P=0&h=180"
+                            class="d-block w-100" alt="Cold">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.Z6wlN82TAcpR6oJv9JG4awHaEK&pid=Api&P=0&h=180"
+                            class="d-block w-100" alt="Cloudy">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.5x55ok_C4nDYHxPzLN47_wHaEK&pid=Api&P=0&h=180"
+                            class="d-block w-100" alt="Rainy">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="container my-5 animate">
+        <h2 class="text-center mb-4 display-5 fw-bold">Features</h2>
+        <div class="row g-4"> <!-- Added gap between feature cards -->
+            <div class="col-md-4 text-center">
+                <div class="feature-card p-4">
+                    <h3>🌤️ Real-Time Updates</h3>
+                    <p>Get real-time weather updates for your location.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-card p-4">
+                    <h3>🌍 Global Coverage</h3>
+                    <p>Check weather for any city in and around the world.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-card p-4">
+                    <h3>📱 Mobile Friendly</h3>
+                    <p>Accessible on all kinds of devices, anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container-fluid py-5 bg-gradient animate">
+        <div class="container">
+            <h2 class="text-center mb-4 display-5 fw-bold">About Us</h2>
+            <div class="row align-items-center g-4">
+                <div class="col-md-6 text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" 
+                         class="img-fluid about-image" 
+                         alt="Weather Icon" 
+                         style="max-width: 300px;">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead fs-5">
+                        🌦️ <strong>Qwik Weather</strong> is your go-to platform for accurate and up-to-date weather information. Our mission is to make weather forecasting simple and accessible for everyone.
+                    </p>
+                    <p class="fs-5">
+                        🌍 With a team of passionate meteorologists and developers, we provide real-time weather updates, global coverage, and a user-friendly interface. Whether you're planning a trip or just checking the daily forecast, Qwik Weather has you covered.
+                    </p>
+                    <div class="text-center text-md-start">
+                        <a href="/weather" class="btn btn-primary btn-lg mt-3">
+                            Explore Now <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {{>footer}}
+</body>
+
+</html>

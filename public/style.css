@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Sigmar&display=swap');
+
+nav {
+  font-family: "Sigmar", serif;
+  font-style: normal;
+}
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+h2 {
+  color: #1a73e8;
+  /* Blue heading */
+  margin-bottom: 40px;
+}
+
+.animate {
+  animation: anime 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes anime {
+  /* Existing animation */
+
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Shaking Animation */
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px, 0); }
+  50% { transform: translate(5px, 0); }
+  75% { transform: translate(-5px, 0); }
+  100% { transform: translate(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Navbar */
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Hero Section */
+.main_header {
+  /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+  color: black;
+}
+
+.main_left h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.main_left button {
+  background-color: #ffc107;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.main_left button:hover {
+  background-color: #e0a800;
+}
+
+/* Features Section */
+.feature-card {
+  border: 1px solid #dbdddf;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* About Us Section */
+#about {
+  background: linear-gradient(135deg, #f0f9ff, #e6f4ff);
+  /* Light blue gradient */
+  padding: 80px 0;
+}
+
+#about .about-image {
+  animation: float 3s ease-in-out infinite;
+  /* Floating animation */
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#about .lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#about .btn-primary {
+  background-color: #1a73e8;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#about .btn-primary:hover {
+  background-color: #1557b0;
+  transform: translateY(-3px);
+}
+
+#about .btn-primary i {
+  transition: transform 0.3s ease;
+}
+
+#about .btn-primary:hover i {
+  transform: translateX(5px);
+}
+
+/* Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer {
+  background-color: #343a40;
+  color: white;
+  margin-top: auto; /* Pushes footer to the bottom */
+  /* Ensure footer is always at the bottom */
+}
+
+
+
+.social-links a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffc107 !important;
+}
+
+.err {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* weather card */
+.searchBoxcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBox {
+  display: flex;
+  width: 600px;
+  margin-inline: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 40px;
+  position: relative;
+  min-width: 380px;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/*hover effect*/
+.searchButton:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+.searchButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  width:500px;
+  background: none;
+  outline: none;
+  height: 50px;
+  color: white;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+  min-width: 370px;
+}
+
+.weathercard-container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weathercard {
+  max-width: 470px;
+  min-width: 390px;
+  height: auto;
+  padding: 25px;
+  padding-top: 8px;
+  background: radial-gradient(178.94% 106.41% at 26.42% 106.41%, #FFF7B1 0%, rgba(255, 255, 255, 0) 71.88%), #FFFFFF;
+  box-shadow: 0px 155px 62px rgba(0, 0, 0, 0.01), 0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(0, 0, 0, 0.09), 0px 10px 21px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  text-align: center;
+  margin: 15px;
+}
+#weatherdesc{
+  margin-top: -30px;
+}
+.weathercard-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: -15px;
+}
+
+.temp {
+  font-weight: 700;
+  font-size: 64px;
+  color: rgba(87, 77, 51, 1);
+}
+
+.weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.containerr{
+  font-size: 150px;
+  animation: float 3s ease-in-out infinite;
+}
+@media (max-width: 480px) {
+  .weathercard {
+    width: 90%;
+  }
+
+  .temp {
+    font-size: 48px;
+  }
+
+  .detail {
+    font-size: 12px;
+  }
+}
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px, 0); }
+  50% { transform: translate(5px, 0); }
+  75% { transform: translate(-5px, 0); }
+  100% { transform: translate(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
