@@ -22,7 +22,7 @@ weathercard.innerHTML = `<h3 class="mt-4">Enter your city name to search</h3>`;
 const getDetails = async () => {
     let searchValue = searchInput.value;
     if (searchValue === "") {
-        weathercard.innerHTML = `<h3 class="mt-4 shake">Please enter your city name before you search</h3>`;
+        weathercard.innerHTML = `<h3 class="mt-4 shake text-danger">Please enter your city name before you search</h3>`;
     }
     else {
         try {
