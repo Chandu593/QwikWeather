@@ -4,14 +4,9 @@ A simple **Weather Application** built using **HTML, CSS, Bootstrap, Express.js*
 
 ---
 
-## 🚀 Live Demo
-[Click Here to View](#) (Replace with your deployed link)
-
----
-
 ## 🛠️ Technologies Used
 
-- **Frontend:** HTML, CSS, Bootstrap  
+- **Frontend:** HTML, CSS, Bootstrap, JS
 - **Backend:** Node.js, Express.js  
 - **API:** OpenWeather API  
 
